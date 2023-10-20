@@ -146,6 +146,7 @@ footer li {
     margin-left: 50px;
     font-family: AwardsFont;
     text-transform: capitalize;
+    list-style-type: none;
     text-overflow: wrap;
 }
 /* #endregion */
