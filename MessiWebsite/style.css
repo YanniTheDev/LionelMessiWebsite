@@ -44,15 +44,15 @@ nav {
     margin: 10px 50px 0px 50px;
     text-align: left;
     font-family: HeaderFont;
-    font-size: 2.9rem;
+    font-size: 3.5vw;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgb(102, 102, 102);
 }
 nav p {
     margin-top: 0px;
-    padding-bottom: 10px;
-    font-size: 1rem;
+    padding-bottom: 5px;
+    font-size: 1.5vw;
 }
 .navContainer {
     padding-right: 20px;
@@ -61,16 +61,29 @@ nav p {
 }
 .title {
     padding-left: 20px;
+    padding-right: 50px;
 }
 .sectionsContainer {
     display: flex;
     align-items: center;
 }
 .sectionsItems {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 .sectionsItems:not(#awardsLink) {
     padding-right: 50px;
+}
+.navIcon {
+    display: none;
+}
+
+@media screen and (max-width: 973px) {
+    .sectionsItems{
+        display: none;
+    }
+    .navIcon {
+        display: flex;
+    }
 }
 /* #endregion */
 
@@ -82,14 +95,15 @@ main {
 main h1 {
     font-family: HeaderFont, Arial, Helvetica, sans-serif;
     margin-top: 50px;
+    font-size: 2vw;
 }
 main p{
     font-family: MainFont, Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
+    font-size: 1.5vw;
 }
 main img {
     opacity: 1;
-    height: 265px;
+    height: 15vw;
     float: right;
     margin-left: 20px;
     box-shadow: 0px 0px 20px rgb(160, 160, 160);
@@ -98,9 +112,14 @@ main img {
 main img:hover {
     transform: scale(1.05);
 }
+.quotesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #quotes {
     margin-top: 40px;
-    margin-bottom: 150px;
+    margin-bottom: 10vmax;
     padding: 10px 10px 10px 10px;
     border: 3px solid black;
     border-radius: 10px;
@@ -108,8 +127,7 @@ main img:hover {
     margin-left: 200px;
     margin-right: 200px;
     font-family: Skinny, Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    text-align: center;
+    font-size: 1.5vw;
     min-width: 175px;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease;
 }
@@ -128,16 +146,18 @@ footer h1 {
     padding-top: 40px;
     padding-bottom: 30px;
     margin-left: 50px;
+    font-size: 2vw;
     font-family: HeaderFont, Arial, Helvetica, sans-serif;
 }
 .awardsContainer {
+    min-width: 910px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
 }
 .awards1, .awards2, .awards3 {
-    line-height: 40px;
+    line-height: 5vw;
 }
 .awards3 {
     margin-right: 50px;
@@ -148,6 +168,21 @@ footer li {
     text-transform: capitalize;
     list-style-type: none;
     text-overflow: wrap;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 973px) {
+    .awardsContainer {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    footer li {
+        font-size: 1.5vw;
+    }
+    footer h1 {
+        font-size: 2vw;
+    }
 }
 /* #endregion */
 
